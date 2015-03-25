@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>{% block title %}{% endblock %} - Trip Planner</title>
-        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/stylesheets/tripPlanner.css">
-    </head>
-    <body>
+{% extends "layout.html" %}
+	{% block content %}
     	<select>
     		{% for hotel in Hotel %}
     		<option value="{{hotel.name}}">{{hotel.name}}</option>
@@ -21,5 +15,4 @@
     		<option value="{{thingToDo.name}}">{{thingToDo.name}}</option>
     		{% endfor %}
     	</select>
-	</body>
-</html>
+  {% endblock %}
