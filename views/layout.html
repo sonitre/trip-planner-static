@@ -12,13 +12,20 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#trip-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Trip Planner</a>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="trip-navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
       </div>
     </nav>
     <div class = "container">
@@ -26,8 +33,8 @@
         {% endblock %}
     </div>
     <script src="https://maps.googleapis.com/maps/api/js?key={{keys}}&sensor=true"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script>
             function initialize_gmaps() {
             // initialize new google maps LatLng object
