@@ -1,0 +1,36 @@
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+ padding-top: 70px;
+}
+
+.map {
+	background-color: black;
+	height: 680px;
+}
+
+.side-bar {
+	height: 680px;
+}
+
+.options-panel {
+	background-color: #2ecc71;
+}
+
+.options-label {
+	display: block;
+}
+
+.select-option {
+	display: inline;
+	width: 85%;
+}
+
+.btn-remove {
+	display: inline;
+	background-color: #2980b9;
+}
