@@ -1,8 +1,30 @@
 * {
   box-sizing: border-box; }
 
+ul {
+  list-style-type: none;
+  padding-left: 15px; }
+
 body {
-  padding-top: 70px; }
+  padding-top: 70px;
+  font-family: 'Karla', sans-serif;
+  color: #555f60; }
+
+h2 {
+  font-size: 16px; }
+
+h1 {
+  text-align: center;
+  font-size: 24px; }
+
+.current-day {
+  background-color: white; }
+
+.day-buttons {
+  padding: 10px 0; }
+
+.form-group {
+  float: none; }
 
 .navbar {
   background-color: #2980b9; }
@@ -10,31 +32,41 @@ body {
 .navbar .navbar-nav > li > a, .navbar .navbar-brand {
   color: #fff; }
 
-.map {
+#map-canvas {
   background-color: black;
-  height: 680px; }
+  height: 85vh; }
 
 .side-bar {
-  height: 680px; }
+  height: 85vh; }
 
 .options-panel {
-  background-color: #2ecc71; }
+  padding: 10px;
+  background-color: #a9d1ec; }
 
 .options-label {
-  display: block; }
+  display: block;
+  width: 80%; }
+  .options-label h2 {
+    padding: 0px;
+    margin: 0px; }
 
-.select-option {
+.trip-dropdown {
+  margin-top: 5px;
+  margin-bottom: 10px;
   display: inline;
   width: 85%; }
 
 .itinerary {
-  background-color: #2ecc71; }
+  background-color: #a9d1ec;
+  height: 50%; }
 
 .day-selector {
   width: 100%;
-  background-color: #2980b9; }
+  background-color: #7fbbe3; }
 
 .btn-remove, .btn-add {
+  display: block;
+  float: right;
   background-color: transparent;
   border: none; }
 

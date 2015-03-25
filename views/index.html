@@ -2,36 +2,35 @@
 	{% block content %}
 
     
-    	<div class="col-lg-8 map">
-				<p>Map</p>
-		</div>
+    	<div class="col-lg-8" id= "map-canvas">
+			</div>
 
 		<div class ="col-lg-4 side-bar">
 			<div class ="col-lg-12 options-panel">
 				<div class = "form-group">
-					<label class= "options-label" for="hotel">Hotels</label>
-					<select class = "form-control select-option" id= "hotel">
-		    		{% for hotel in Hotel %}
-		    		<option value="{{hotel.name}}">{{hotel.name}}</option>
-		    		{% endfor %}
-		    	</select>
-		    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+						<label class= "options-label" for="hotel"><h2>Hotels</h2></label>
+						<select class = "form-control trip-dropdown" id= "hotel">
+			    		{% for hotel in results.Hotel %}
+			    		<option value="{{hotel.name}}">{{hotel.name}}</option>
+			    		{% endfor %}
+			    	</select>
+			    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 
-		    	<label class= "options-label" for="restaurant">Restaurants</label>
-		    	<select class = "form-control select-option" id= "restaurant">
-		    		{% for restaurant in Restaurant %}
-		    		<option value="{{restaurant.name}}">{{restaurant.name}}</option>
-		    		{% endfor %}
-		    	</select>
-		    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+			    	<label class= "options-label" for="restaurant"><h2>Restaurants</h2></label>
+			    	<select class = "form-control trip-dropdown" id= "restaurant">
+			    		{% for restaurant in results.Restaurant %}
+			    		<option value="{{restaurant.name}}">{{restaurant.name}}</option>
+			    		{% endfor %}
+			    	</select>
+			    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 
-		    	<label class= "options-label" for="thingToDo">Things To Do</label>
-		    	<select class = "form-control select-option" id= "thingToDo">
-		    		{% for thingToDo in ThingToDo %}
-		    		<option value="{{thingToDo.name}}">{{thingToDo.name}}</option>
-		    		{% endfor %}
-		    	</select>
-		    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+			    	<label class= "options-label" for="thingToDo"><h2>Things To Do</h2></label>
+			    	<select class = "form-control trip-dropdown" id= "thingToDo">
+			    		{% for thingToDo in results.ThingToDo %}
+			    		<option value="{{thingToDo.name}}">{{thingToDo.name}}</option>
+			    		{% endfor %}
+			    	</select>
+			    	<button type="button" class="btn btn-default btn-xs btn-add"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 	    		</div> <!--closes form-group-->
 	    	</div> <!--closes options-panel-->
 
@@ -40,10 +39,12 @@
 			  </div> <!--closes current-day-->
 	    
 		     <div class="col-lg-12 day-selector">
-	    		<button type="button" class="btn btn-default btn-sm btn-day">1</button>
-	    		<button type="button" class="btn btn-default btn-sm btn-day">2</button>
-	    		<button type="button" class="btn btn-default btn-sm btn-day">3</button>
-	    		<button type="button" class="btn btn-default btn-sm btn-day"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+		     	<div class= "day-buttons">
+		    		<button type="button" class="btn btn-default btn-sm btn-day">1</button>
+		    		<button type="button" class="btn btn-default btn-sm btn-day">2</button>
+		    		<button type="button" class="btn btn-default btn-sm btn-day">3</button>
+		    		<button type="button" class="btn btn-default btn-sm btn-day"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+	    		</div>
 	    	</div> <!--closes day-selector -->
 	    	<div class="col-lg-12 itinerary">
 		    	<h2>My Hotel</h2>

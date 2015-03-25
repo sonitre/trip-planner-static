@@ -4,6 +4,7 @@ var async = require('async');
 var Hotel = models.Hotel;
 var Restaurant = models.Restaurant;
 var ThingToDo = models.ThingToDo;
+var keys = require('../keys.js');
 
 router.get('/', function(req, res, next){
 
@@ -31,7 +32,7 @@ router.get('/', function(req, res, next){
 	};
 
 	async.parallel(getAllData, function(err, results) {
-		res.render('index', results);
+		res.render('index', {results: results, keys: keys.GoogleMapsKey});
 	});
 });
 
