@@ -8,6 +8,14 @@ body {
  padding-top: 70px;
 }
 
+.navbar {
+	background-color: #2980b9;
+}
+
+.navbar .navbar-nav > li > a, .navbar .navbar-brand {
+    color: #fff;
+}
+
 .map {
 	background-color: black;
 	height: 680px;
@@ -30,7 +38,24 @@ body {
 	width: 85%;
 }
 
-.btn-remove {
-	display: inline;
+.itinerary {
+	background-color: #2ecc71;
+}
+
+.day-selector {
+	width: 100%;
 	background-color: #2980b9;
+}
+
+.btn-remove, .btn-add {
+	background-color: transparent;
+	border: none;
+}
+
+.glyphicon-remove {
+	color: #c0392b;
+}
+
+.glyphicon-plus {
+	color: #2980b9;
 }
